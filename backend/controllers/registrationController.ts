@@ -3,14 +3,22 @@ import Registration from '../models/Registration';
 
 export const createRegistration = async (req: Request, res: Response): Promise<void> => {
     const { name, email, birthDate, source, eventId } = req.body;
-    const registration = new Registration({ name, email, birthDate, source, eventId });
     try {
-        await registration.save();
-        res.status(201).json(registration);
+        const newRegistration = new Registration({
+            name,
+            email,
+            birthDate,
+            source,
+            eventId,
+            createdAt: new Date() // Збереження дати реєстрації
+        });
+        const savedRegistration = await newRegistration.save();
+        res.status(201).json(savedRegistration);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
 };
+
 
 export const getRegistrations = async (req: Request, res: Response): Promise<void> => {
     try {

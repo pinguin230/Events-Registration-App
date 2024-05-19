@@ -1,6 +1,6 @@
 // server.ts
 import express from "express";
-import mongoose from "mongoose";
+import mongoose2 from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -12,7 +12,7 @@ import { Schema, model } from "mongoose";
 var EventSchema = new Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
-  date: { type: Date, required: true },
+  date: { type: String, required: true },
   organizer: { type: String, required: true }
 }, { collection: "eventsCollection" });
 var Event_default = model("Event", EventSchema);
@@ -85,25 +85,33 @@ var events_default = router;
 import { Router as Router2 } from "express";
 
 // models/Registration.ts
-import { Schema as Schema2, model as model2 } from "mongoose";
+import mongoose, { Schema as Schema2 } from "mongoose";
 var RegistrationSchema = new Schema2({
   name: { type: String, required: true },
   email: { type: String, required: true },
   birthDate: { type: Date, required: true },
   source: { type: String, required: true },
-  eventId: { type: Schema2.Types.ObjectId, ref: "Event", required: true }
+  eventId: { type: mongoose.Types.ObjectId, ref: "Event", required: true },
+  createdAt: { type: Date, default: Date.now }
 }, { collection: "registrationsCollection" });
-var Registration_default = model2("Registration", RegistrationSchema);
+var Registration_default = mongoose.model("Registration", RegistrationSchema);
 
 // controllers/registrationController.ts
 var createRegistration = async (req, res) => {
   const { name, email, birthDate, source, eventId } = req.body;
-  const registration = new Registration_default({ name, email, birthDate, source, eventId });
   try {
-    await registration.save();
-    res.status(201).json(registration);
+    const newRegistration = new Registration_default({
+      name,
+      email,
+      birthDate,
+      source,
+      eventId,
+      createdAt: new Date()
+    });
+    const savedRegistration = await newRegistration.save();
+    res.status(201).json(savedRegistration);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
 var getRegistrations = async (req, res) => {
@@ -161,7 +169,7 @@ dotenv.config();
 var app = express();
 app.use(cors());
 app.use(express.json());
-mongoose.connect("mongodb+srv://admin:GdGlPlqXGhEuM1234!@events-registration-app.ai1eojj.mongodb.net/?retryWrites=true&w=majority&appName=Events-Registration-App").then(() => console.log("MongoDB connected...")).catch((err) => console.error("MongoDB connection error:", err));
+mongoose2.connect("mongodb+srv://admin:GdGlPlqXGhEuM1234!@events-registration-app.ai1eojj.mongodb.net/?retryWrites=true&w=majority&appName=Events-Registration-App").then(() => console.log("MongoDB connected...")).catch((err) => console.error("MongoDB connection error:", err));
 app.use("/events", events_default);
 app.use("/registrations", registrations_default);
 var PORT = process.env.PORT || 5e3;
