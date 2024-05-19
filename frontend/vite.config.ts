@@ -15,6 +15,16 @@ export default defineConfig({
     })
   ],
   base: '/Events-Registration-App/',
+  resolve: {
+    alias: {
+      '@assets': '/src/assets',
+      '@components': '/src/components',
+      '@pages': '/src/pages',
+      '@photos': '/src/photos',
+      '@routes': '/src/routes',
+      '@utils': '/src/utils'
+    }
+  },
   build: {
     rollupOptions: {
       output: {
