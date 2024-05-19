@@ -14,6 +14,7 @@ export default defineConfig({
       ]
     })
   ],
+  base: '/Events-Registration-App/',
   build: {
     rollupOptions: {
       output: {
