@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06a1022d-3b45-47c1-810e-44e5dc8d88ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../backend/dist/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/controllers/eventController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/controllers/registrationController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/routes/events.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/routes/registrations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/utils/fetchExternalEvents.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/dist/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/dist/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716102976528</updated>
-      <workItem from="1716102977570" duration="928000" />
+      <workItem from="1716102977570" duration="1145000" />
     </task>
     <servers />
   </component>
