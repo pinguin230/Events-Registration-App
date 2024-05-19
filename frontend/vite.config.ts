@@ -14,7 +14,7 @@ export default defineConfig({
       ]
     })
   ],
-  base: '/Events-Registration-App/',
+  base: './Events-Registration-App/',
   resolve: {
     alias: {
       '@assets': '/src/assets',
