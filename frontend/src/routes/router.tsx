@@ -13,4 +13,7 @@ export const router = createBrowserRouter([
             element
         }))
     }
-]);
+],
+    {
+        basename: "/Events-Registration-App"
+    });
