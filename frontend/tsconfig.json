@@ -19,14 +19,13 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
-    "typeRoots" : ["node_modules/@types", "src"],
     "paths": {
-      "assets/*": ["src/assets/*"],
-      "components/*": ["src/components/*"],
-      "pages/*": ["src/pages/*"],
-      "photos/*": ["src/photos/*"],
-      "routes/*": ["src/routes/*"],
-      "utils/*": ["src/utils/*"]
+      "assets/*": ["assets/*"],
+      "components/*": ["components/*"],
+      "pages/*": ["pages/*"],
+      "photos/*": ["photos/*"],
+      "routes/*": ["routes/*"],
+      "utils/*": ["utils/*"]
     }
   },
   "include": ["src", "server", "frontend", "vite.config.ts", "src/photos/*", "declaration.d.ts"],
