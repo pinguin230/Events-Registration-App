@@ -1,3 +1,8 @@
+## Live Demo
+
+[Events Registration App Live Demo](http://localhost:5173/participants/664a4a5203a3fa812c7988b2)
+> **Note**: If the site does not load immediately, please wait for a few moments as the server might need to start up.
+
 ## Description
 Events Registration App is a web application for managing and registering events. It allows users to view, register, and manage events seamlessly. The project is built with React, Node.js, and TypeScript.
 
@@ -17,7 +22,7 @@ Events Registration App is a web application for managing and registering events
 
 ### Backend
 1. Clone the repository:
-git clone https://github.com/yourusername/Events-Registration-App.git
+git clone https://github.com/pinguin230/Events-Registration-App.git
 
 2. Navigate to the backend directory:
 cd Events-Registration-App/backend
