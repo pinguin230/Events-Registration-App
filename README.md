@@ -44,7 +44,7 @@ npm run dev
 
 ### Usage
 
-1. Open your browser and go to http://localhost:5173 for the frontend.
+1. Open your browser and go to http://localhost:8000/Events-Registration-App/ for the frontend.
 2. The backend will be running on http://localhost:5000.
 
 ### Deployment
