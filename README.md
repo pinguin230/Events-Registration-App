@@ -1,6 +1,6 @@
 ## Live Demo
 
-[Events Registration App Live Demo]([http://localhost:5173/participants/664a4a5203a3fa812c7988b2](https://events-registration-app-1-x3i0.onrender.com/Events-Registration-App/))
+[Events Registration App Live Demo]((https://events-registration-app-1-x3i0.onrender.com/Events-Registration-App/))
 > **Note**: If the site does not load immediately, please wait for a few moments as the server might need to start up.
 
 ## Description
