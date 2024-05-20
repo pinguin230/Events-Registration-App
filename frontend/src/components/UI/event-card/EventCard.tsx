@@ -8,12 +8,16 @@ interface EventCardProps {
     date: string;
     organizer: string;
     id: string;
+    onDelete: (id: string) => void;
 }
 
-const EventCard: React.FC<EventCardProps> = ({ title, description, date, organizer, id }) => {
+const EventCard: React.FC<EventCardProps> = ({ title, description, date, organizer, id, onDelete }) => {
     return (
         <div className="event-card">
-            <h2>{title}</h2>
+            <div className="card-header">
+                <h2>{title}</h2>
+                <button onClick={() => onDelete(id)} className="delete-button">Delete</button>
+            </div>
             <p>{description}</p>
             <p>{date}</p>
             <p>{organizer}</p>

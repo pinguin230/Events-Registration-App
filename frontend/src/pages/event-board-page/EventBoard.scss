@@ -20,11 +20,32 @@
   background-color: #e0f2e9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-button {
+  background-color: #004d40;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #00251a;
 }
 
 .event-card h2 {
   font-size: 18px;
   color: #2e7d32;
+  margin: 0;
 }
 
 .event-card p {

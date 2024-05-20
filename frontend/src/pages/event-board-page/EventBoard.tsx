@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import EventCard from "../../components/UI/event-card/EventCard";
-import { fetchEvents } from "../../utils/eventService";
+import { fetchEvents, deleteEvent } from "../../utils/eventService";
 import "./EventBoard.scss";
 
 const EventsBoard: React.FC = () => {
@@ -37,6 +37,15 @@ const EventsBoard: React.FC = () => {
         setPage(1);
     };
 
+    const handleDelete = async (id: string) => {
+        try {
+            await deleteEvent(id);
+            setEvents(events.filter(event => event._id !== id));
+        } catch (error) {
+            console.error('Error deleting event:', error);
+        }
+    };
+
     return (
         <div className="events-board">
             <h1>Events</h1>
@@ -57,6 +66,7 @@ const EventsBoard: React.FC = () => {
                         description={event.description}
                         date={event.date}
                         organizer={event.organizer}
+                        onDelete={handleDelete}
                     />
                 ))}
             </div>

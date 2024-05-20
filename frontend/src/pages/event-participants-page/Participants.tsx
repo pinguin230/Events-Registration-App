@@ -52,7 +52,14 @@ const Participants: React.FC = () => {
 
     return (
         <div className="participants-container">
-            <h1>{`"${eventName}" participants`}</h1>
+            <div className="header">
+                <h1>{`"${eventName}" participants`}</h1>
+                {participants.length > 0 && (
+                    <Link to={`/register/${eventId}`} className="register-button">
+                        Register for this event
+                    </Link>
+                )}
+            </div>
             {participants.length > 0 ? (
                 <>
                     <div className="search-bar">

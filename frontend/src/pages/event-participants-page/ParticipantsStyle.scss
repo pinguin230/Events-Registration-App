@@ -8,10 +8,30 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.participants-container h1 {
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 5px auto;
   color: #00695c;
-  text-align: center;
-  margin-bottom: 20px;
+}
+
+.register-button {
+  padding: 10px 15px;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.register-button:hover {
+  background-color: #003d33;
 }
 
 .search-bar {
@@ -60,20 +80,4 @@
 
 .no-participants p {
   color: #00796b;
-}
-
-.register-button {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #004d40;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-.register-button:hover {
-  background-color: #003d33;
 }
