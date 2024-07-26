@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://events-registration-app-77ki.onrender.com/events';
+const API_URL = 'https://events-registration-app-backend-11ao.onrender.com/events';
 
 export const fetchEvents = async (page: number = 1, limit: number = 20, sortBy: string = 'date') => {
     const response = await axios.get(`${API_URL}?page=${page}&limit=${limit}&sortBy=${sortBy}`);
